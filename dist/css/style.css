@@ -1,0 +1,123 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.125rem;
+  color: #202046;
+  background-color: white;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+  min-height: 4rem;
+  width: 100%;
+  background-image: url("../../images/pattern-curve.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1, h2 {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+h1 {
+  margin-top: 1.75rem;
+}
+
+p {
+  line-height: 1.5;
+}
+
+h2 {
+  margin-top: 0.625rem;
+  font-weight: 300;
+  color: #babacf;
+}
+
+.hide {
+  display: none;
+}
+
+.slideshow {
+  margin: 10%;
+  padding: 1rem 0 1rem 0;
+}
+
+.slideshow-slide-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.slideshow-slide-image::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  height: 311px;
+  width: 330px;
+  background-image: url("../../images/pattern-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translateY(-2rem);
+}
+
+.slideshow-slide-image > img {
+  border-radius: 10px;
+  max-height: 15.875rem;
+  max-width: 15.875rem;
+  box-shadow: 0px 3px 20px 10px #babacf;
+}
+
+.slideshow-slide-image-btn {
+  position: absolute;
+  bottom: -20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 40px;
+  width: 80px;
+  background-color: white;
+  border-radius: 30px;
+}
+
+.slideshow-slide-image-btn a img {
+  display: block;
+  margin: auto;
+}
+
+.slideshow-slide-text {
+  margin-top: 5.375rem;
+  text-align: center;
+}
+
+.slideshow-slide-text::before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  height: 50px;
+  width: 60px;
+  background-image: url("../../images/pattern-quotes.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: translate(-1rem, -1rem);
+}
+/*# sourceMappingURL=style.css.map */
