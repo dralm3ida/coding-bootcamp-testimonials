@@ -1,3 +1,12 @@
+@keyframes fade-slide {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -75,6 +84,10 @@ h2 {
 
 .hide {
   display: none !important;
+}
+
+.fade {
+  animation: fade-slide 500ms ease-in-out;
 }
 
 .slideshow {
@@ -162,6 +175,18 @@ h2 {
     left: 64px;
     height: 56px;
     width: 114px;
+  }
+}
+
+.slideshow-slide-image-btn a {
+  display: flex;
+  height: 100%;
+}
+
+@media (min-width: 64rem) {
+  .slideshow-slide-image-btn a:hover {
+    cursor: pointer;
+    opacity: 0.4;
   }
 }
 

@@ -21,12 +21,12 @@
 <body>
 
    <div class="slideshow">
-      <div class="slideshow-slide">
+      <div class="slideshow-slide fade">
          <div class="slideshow-slide-image">
             <img src="images/image-tanya.jpg" alt="Tanya Sinclair">
             <div class="slideshow-slide-image-btn">
-               <a id="prev"><img src="images/icon-prev.svg" alt="Previews"></a>
-               <a id="next"><img src="images/icon-next.svg" alt="Next"></a>
+               <a id="prev" onclick="shiftSlide()"><img src="images/icon-prev.svg" alt="Previews"></a>
+               <a id="next" onclick="shiftSlide()"><img src="images/icon-next.svg" alt="Next"></a>
             </div>
          </div>
          <div class="slideshow-slide-text">
@@ -38,12 +38,12 @@
          </div>
       </div>
 
-      <div class="slideshow-slide hide">
+      <div class="slideshow-slide fade hide">
          <div class="slideshow-slide-image">
             <img src="images/image-john.jpg" alt="John Tarkpor">
             <div class="slideshow-slide-image-btn">
-               <a id="prev"><img src="images/icon-prev.svg" alt="Previews"></a>
-               <a id="next"><img src="images/icon-next.svg" alt="Next"></a>
+               <a id="prev" onclick="shiftSlide()"><img src="images/icon-prev.svg" alt="Previews"></a>
+               <a id="next" onclick="shiftSlide()"><img src="images/icon-next.svg" alt="Next"></a>
             </div>
          </div>
          <div class="slideshow-slide-text">

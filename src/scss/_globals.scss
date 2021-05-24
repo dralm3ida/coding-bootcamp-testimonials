@@ -70,3 +70,7 @@ h2 {
 .hide {
    display: none !important;
 }
+
+.fade {
+   animation: fade-slide 500ms ease-in-out;
+}

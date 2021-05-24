@@ -73,6 +73,15 @@
             }
             
             a {
+               display: flex;
+               height: 100%;
+
+               @include break-up($laptop-md){
+                  &:hover{
+                     cursor: pointer;
+                     opacity: 0.4;
+                  }
+               }
                img {
                   display: block;
                   margin: auto;
