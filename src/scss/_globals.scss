@@ -14,12 +14,17 @@ html {
 body {
    margin: 0;
    padding: 0;
+   height: 100vh;
    font-family: 'Inter', sans-serif;
    font-size: $font-size-sm;
    color: $darkBlue;
    background-color: $white;
    font-weight: 300;
    overflow-x: hidden;
+
+   @include break-up($laptop-md){
+      font-size: $font-size;
+   }
 
    &::after {
       content: "";
@@ -31,12 +36,21 @@ body {
       background-image: url('../../images/pattern-curve.svg');
       background-size: cover;
       background-repeat: no-repeat;
+
+      @include break-up($laptop-md){
+         min-height: 10rem;
+         left: -150px;
+      }
    }
 }
 
 h1, h2 {
    font-weight: 700;
    font-size: $font-size-sm;
+
+   @include break-up($laptop-md){
+      display: inline-block;
+   }
 }
 
 h1 {
@@ -54,5 +68,5 @@ h2 {
 }
 
 .hide {
-   display: none;
+   display: none !important;
 }

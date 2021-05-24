@@ -1,13 +1,26 @@
 .slideshow {
-   margin: 10%;
    padding: 1rem 0 1rem 0;
 
    &-slide{
+      margin: 10%;
+
+      @include break-up($laptop-md){
+         margin: 6% 10% 6% 10%;
+         display: grid;
+         grid-template-columns: repeat(20, 1fr);
+         grid-template-areas: "text text text text image image";
+      }
 
       &-image{
          position: relative;
          display: flex;
          justify-content: center;
+
+         @include break-up($laptop-md){
+            width: 33.75rem; // 540px
+            grid-area: image;
+            grid-column: 11 / span 10;
+         }
          
          &::before {
             content: "";
@@ -19,13 +32,26 @@
             background-size: cover;
             background-repeat: no-repeat;
             transform: translateY(-2rem);
+            
+            @include break-up($laptop-md){
+               height: 658px;
+               width: 698px;
+               transform: translateY(-4rem);
+            }
          }
 
          > img {
             border-radius: 10px;
             max-height: 15.875rem; // 254px
             max-width: 15.875rem; // 254px
-            box-shadow: 0px 3px 20px 10px $grayishBlue;
+            box-shadow: 0px 1px 20px 1px $grayishBlue;
+
+            @include break-up($laptop-md){
+               max-height: 33.75rem; // 540px
+               max-width: 33.75rem; // 540px
+               height: auto;
+               width: auto;
+            }
          }
 
          &-btn{
@@ -38,6 +64,13 @@
             width: 80px;
             background-color: $white;
             border-radius: 30px;
+
+            @include break-up($laptop-md){
+               bottom: -28px;
+               left: 64px;
+               height: 56px;
+               width: 114px;
+            }
             
             a {
                img {
@@ -52,6 +85,15 @@
          margin-top: 5.375rem;
          text-align: center;
 
+         @include break-up($laptop-md){
+            z-index: 1;
+            margin-top:unset;
+            grid-area: text;
+            grid-column: 1 / span 11;
+            text-align: left;
+            align-self: center;
+         }
+
          &::before {
             content: "";
             position: fixed;
@@ -62,6 +104,12 @@
             background-size: cover;
             background-repeat: no-repeat;
             transform: translate(-1rem, -1rem);
+
+            @include break-up($laptop-md){
+               height: 100px;
+               width: 120px;
+               transform: translate(5rem, -4rem);
+            }
          }
       }
    }
